@@ -1,0 +1,5 @@
+To execute the code, run
+
+g++ chol_cpu.cpp -llapack -lblas -lgfortran -o chol_cpu
+
+All results will be printed on the terminal
