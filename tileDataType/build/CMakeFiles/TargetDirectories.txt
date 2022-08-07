@@ -1,0 +1,3 @@
+/home/bruno/Documents/internhsip/tileDataType/build/CMakeFiles/tileDataType.dir
+/home/bruno/Documents/internhsip/tileDataType/build/CMakeFiles/edit_cache.dir
+/home/bruno/Documents/internhsip/tileDataType/build/CMakeFiles/rebuild_cache.dir
