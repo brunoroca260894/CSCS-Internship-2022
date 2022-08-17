@@ -36,7 +36,7 @@ void dpotrf_tile(Tile<T> tileA, int *INFO) {
 template <typename T>
 void dgemm_tile(const Tile<T> tileA, const Tile<T> tileB, Tile<T> tileC, T *alpha, T *beta) {
   char TRANSA = 'N';
-  char TRANSB = 'N';
+  char TRANSB = 'T';
   int M = tileA.rowsTile;
   int N = tileB.colsTile;
   int K = tileA.colsTile;  // = tB1.rowsTile
@@ -49,10 +49,10 @@ void dgemm_tile(const Tile<T> tileA, const Tile<T> tileB, Tile<T> tileC, T *alph
 }
 
 template <typename T>
-void dtrsm_tile(const Tile<T> tileA, Tile<T> tileB, T *alpha) {
-  char SIDE ='L';
+void dtrsm_tile(const Tile<T> tileA, Tile<T> tileB, T* alpha) {
+  char SIDE ='R';
   char UPLO ='L';                       
-  char TRANSA = 'N';
+  char TRANSA = 'T';
   char DIAG = 'N';
   int M = tileB.rowsTile; // rows in tileB  
   int N = tileB.colsTile; // cols in tileB  

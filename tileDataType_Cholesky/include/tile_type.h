@@ -13,7 +13,7 @@ struct Tile {
   int ld;
   T* firstElement;
   const T& operator()(int row, int col) const noexcept {
-    return firstElement[ld * (col - 1) + row - 1];
+    return firstElement[ld * col + row];
   }
 };
 
@@ -93,6 +93,6 @@ struct Matrix {
 
   const Tile<T>& operator()(int i, int j) const noexcept {
     // it is assumed the indexing starts at 1
-    return tiles[(j - 1) * tilesInRow + i - 1];
+    return tiles[j * tilesInRow + i];
   }
 };
