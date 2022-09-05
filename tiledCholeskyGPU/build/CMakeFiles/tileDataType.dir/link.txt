@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/tileDataType.dir/main.cpp.o -o tileDataType   -L/usr/local/cuda-11.7/targets/x86_64-linux/lib  -Wl,-rpath,/usr/local/cuda-11.7/targets/x86_64-linux/lib -lcublas -lcusolver 
